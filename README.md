@@ -1,4 +1,3 @@
-```markdown
 # Exploratory Data Analysis (EDA) - Credit Card Fraud Detection
 
 ## 📌 Problem Description
@@ -81,4 +80,4 @@ The project was implemented in the following stages:
 
 ## ✅ Conclusion
 Through this EDA, we gained a deeper understanding of the **credit card fraud detection dataset**. The insights from this analysis highlight important trends and anomalies that can serve as the foundation for **predictive modeling and machine learning applications** in fraud detection. By identifying key fraud indicators early, financial institutions can **prevent fraudulent activities** and **protect customers’ financial assets**.
-```
+
