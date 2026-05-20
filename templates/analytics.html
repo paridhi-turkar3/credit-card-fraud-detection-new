@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+
+<meta name="viewport"
+content="width=device-width, initial-scale=1.0">
+
+<title>Analytics Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+<!-- Chart.js CDN -->
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>Analytics Dashboard</h2>
+
+<div>
+
+<a href="/">Home</a>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/analytics">Analytics</a>
+
+</div>
+
+</nav>
+
+<div class="analytics-page">
+
+<h1 class="analytics-title">
+
+Fraud Analytics & Insights
+
+</h1>
+
+<div class="charts-container">
+
+<!-- PIE CHART -->
+<div class="chart-card">
+
+<h2>Fraud vs Safe Transactions</h2>
+
+<canvas id="fraudChart"></canvas>
+
+</div>
+
+<!-- BAR CHART -->
+<div class="chart-card">
+
+<h2>Risk Level Distribution</h2>
+
+<canvas id="riskChart"></canvas>
+
+</div>
+
+<!-- LINE CHART -->
+<div class="chart-card">
+
+<h2>Weekly Fraud Attempts</h2>
+
+<canvas id="lineChart"></canvas>
+
+</div>
+
+</div>
+
+</div>
+
+<!-- charts.js -->
+<script
+src="{{ url_for('static', filename='charts.js') }}">
+</script>
+<footer>
+
+    Developed by Paridhi Turkar | AI Fraud Detection System
+
+</footer>
+</body>
+</html>

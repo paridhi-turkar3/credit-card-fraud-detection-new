@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>Dashboard</title>
+
+<link rel="stylesheet"
+href="{{ url_for('static', filename='style.css') }}">
+
+</head>
+
+<body>
+
+<nav>
+
+<h2>Fraud Dashboard</h2>
+
+<div>
+
+<a href="/">Home</a>
+
+<a href="/dashboard">Dashboard</a>
+
+<a href="/analytics">Analytics</a>
+
+</div>
+
+</nav>
+
+<div class="dashboard-container">
+
+
+<div class="stats-container">
+
+    <div class="stat-card">
+        <h2 id="total-transactions">0</h2>
+        <p>Total Transactions</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="safe-count">0</h2>
+        <p>Safe Transactions</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="fraud-count">0</h2>
+        <p>Fraud Detected</p>
+    </div>
+
+    <div class="stat-card">
+        <h2 id="risk-average">0%</h2>
+        <p>Average Risk</p>
+    </div>
+
+</div>
+
+<div class="card">
+
+<h1>Transaction Scanner</h1>
+
+<input type="number"
+id="amount"
+placeholder="Transaction Amount">
+
+<input type="number"
+id="hour"
+placeholder="Transaction Hour">
+
+<select id="merchant">
+
+<option>Shopping</option>
+<option>Travel</option>
+<option>Electronics</option>
+
+</select>
+
+<select id="device">
+
+<option>Mobile</option>
+<option>ATM</option>
+<option>Laptop</option>
+
+</select>
+
+<select id="frequency">
+
+<option>Normal</option>
+<option>Unusual</option>
+
+</select>
+
+<div class="btn-group">
+
+<button onclick="loadSafeDemo()">
+Safe Demo
+</button>
+
+<button onclick="loadFraudDemo()">
+Fraud Demo
+</button>
+
+</div>
+
+<button class="primary-btn"
+onclick="predictFraud()">
+
+Analyze Transaction
+
+</button>
+
+<div id="result">
+
+    <img
+    id="result-image"
+    src=""
+    style="
+        width:140px;
+        display:none;
+        margin:20px auto;
+        border-radius:12px;
+    ">
+
+    <div id="result-text"></div>
+
+</div>
+
+<div id="badge"></div>
+
+<div class="risk-meter">
+
+<div id="risk-bar"></div>
+
+</div>
+
+<table>
+
+<thead>
+
+<tr>
+
+<th>Amount</th>
+
+<th>Merchant</th>
+
+<th>Device</th>
+
+<th>Status</th>
+
+<th>Risk</th>
+
+</tr>
+
+</thead>
+
+<tbody id="history-body">
+
+</tbody>
+
+</table>
+
+</div>
+
+</div>
+
+<script
+src="{{ url_for('static', filename='script.js') }}">
+</script>
+
+<footer>
+
+    Developed by Paridhi Turkar | AI Fraud Detection System
+
+</footer>
+
+</body>
+</html>
