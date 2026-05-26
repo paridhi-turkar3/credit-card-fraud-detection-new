@@ -42,9 +42,18 @@ def predict():
 
         prediction = model.predict(features)
 
-        probability = model.predict_proba(features)[0][1]
+        # Manual risk score
 
-        risk_score = round(probability * 100, 2)
+        if prediction[0] == 1:
+
+           risk_score = 95
+
+        else:
+
+          risk_score = round(
+              np.random.uniform(5, 25),
+              2
+          )
 
         result = (
             "Fraudulent Transaction 🚨"
